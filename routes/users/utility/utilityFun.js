@@ -69,7 +69,7 @@ utility.get('/google/redirect',passport.authenticate('google'),(req, res) => {
 
 
 //cache.route('videoDetails', 36000)//
-utility.get('/videoAll', fecthDataMW,errorVEH, (req,res) => {
+utility.get('/videoAll', fecthDataMW,errorVEH, (req, res) => {
     logger.info("Succes videoAll Fetched")
 });
 //
