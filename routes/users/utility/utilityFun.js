@@ -58,7 +58,7 @@ utility.get('/google',passport.authenticate('google',{
 }));
 
 
-utility.get('/google/redirect',passport.authenticate('google'),(req,res) => {
+utility.get('/google/redirect',passport.authenticate('google'),(req, res) => {
        
     var token = jwt.sign(req.user.userName, hashSecret.HASHPASS);
     let conURL = "/jwttoken/"+token+"/user/"+req.user.userName+"/type/"+req.user.userType+"/id/"+req.user._id;
